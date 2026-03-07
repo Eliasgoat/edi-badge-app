@@ -77,7 +77,10 @@ export default function MintButton({ formData, canvasRef }) {
       // Mint the NFT (calls mintBadge on the deployed Solidity smart contract via ethers.js bridge between react and blockchain)
       setStatus("Minting badge — confirm in MetaMask...");
       const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-      const tx = await contract.mintBadge(formData.recipientWallet, metadataUrl);
+      const tx = await contract.mintBadge(formData.recipientWallet, metadataUrl, {
+        maxPriorityFeePerGas: ethers.parseUnits("30", "gwei"),
+        maxFeePerGas: ethers.parseUnits("50", "gwei"),
+      });
 
       setStatus("Waiting for transaction confirmation...");
       const receipt = await tx.wait();
