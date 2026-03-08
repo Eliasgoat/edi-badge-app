@@ -54,7 +54,7 @@ export default function App() {
     <>
       {/* NAVBAR */}
       <nav className="navbar">
-        <div className="navbar-logo">EDI<span>//</span>BADGE</div>
+        <div className="navbar-logo">EDI<span> </span>BADGE</div>
         <div className="navbar-right">
           <div className="network-badge">POLYGON AMOY</div>
           {walletAddress ? (

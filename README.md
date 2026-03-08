@@ -1,16 +1,36 @@
-# React + Vite
+# EDI BADGE — NFT Badge Minter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that mints verifiable NFT badges on the Polygon Amoy Testnet as part of the EDI Challenge 2026.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fill in badge metadata (name, visa type, dates, project)
+- Live badge preview generated dynamically from input using the Canvas API
+- Mints an ERC-721 NFT on Polygon Amoy Testnet
+- Sends the badge to a specified wallet address
+- Uploads badge image and metadata to IPFS via Pinata
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React + Vite
+- **Blockchain:** Solidity (ERC-721), deployed on Polygon Amoy Testnet
+- **Wallet:** MetaMask (ethers.js)
+- **Storage:** IPFS via Pinata
+- **Deployment:** Vercel
+- **CI/CD:** GitHub Actions
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- MetaMask browser extension
+- Polygon Amoy Testnet configured in MetaMask
+- Authorized wallet address (access is restricted)
+
+## Smart Contract
+
+- **Network:** Polygon Amoy Testnet
+- **Standard:** ERC-721
+- **Contract Address:** `0xe655B62fAD873fD9D4312FBcDB305ca52250509B`
+
+## Deployment
+
+Live at: `https://edi-badge-web-app.vercel.app/`
