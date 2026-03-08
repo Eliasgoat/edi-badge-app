@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ethers } from "ethers";
 import { CONTRACT_ADDRESS, ABI } from "../utils/badgeContract";
 import { uploadCanvasToPinata, uploadMetadataToPinata } from "../utils/ipfs";
+
 // Mintbutton component handles the minting process when the user clicks the "Mint Badge" button. It connects to MetaMask, uploads the badge image and metadata to IPFS (Pinata), and interacts with the smart contract to mint the NFT. It also provides feedback on the minting status and displays a link to view the transaction on PolygonScan once minted.
 export default function MintButton({ formData, canvasRef }) {
   const [status, setStatus] = useState("");
@@ -24,7 +25,7 @@ export default function MintButton({ formData, canvasRef }) {
         return;
       }
 
-      //This makes sure only allowed wallets can mint. For now, it's only me (Elias) and the examiner (Raphael). This part could go to .env file
+      //This makes sure only allowed wallets can mint. For now, it's only me (Elias) and the examiner (Raphael)
       const ALLOWED_WALLETS = [
         "0x8D4fb4B7cbb0d8e8E225eAA6cCe7C5aBB6030c5c",
         "0x0c4869fd5A92ed96Aef6EFAeFCfdC1BEe931B67F"

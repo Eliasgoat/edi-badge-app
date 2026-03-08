@@ -13,7 +13,7 @@ export default function BadgeForm({ formData, onChange }) {
 
   return (
     <div className="form-container">
-      <h2>Badge Information</h2>
+      <div className="form-title">Badge Metadata</div>
       {fields.map((field) => (
         <div key={field.name} className="field">
           <label>{field.label}</label>
@@ -23,6 +23,13 @@ export default function BadgeForm({ formData, onChange }) {
             placeholder={field.placeholder || ""}
             value={formData[field.name]}
             onChange={onChange}
+            className={
+              formData[field.name]
+                ? field.type === "text" && formData[field.name].length < 2
+                  ? "invalid"
+                  : "valid"
+                : ""
+            }
           />
         </div>
       ))}
