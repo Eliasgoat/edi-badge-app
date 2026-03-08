@@ -33,4 +33,4 @@ A web application that mints verifiable NFT badges on the Polygon Amoy Testnet a
 
 ## Deployment
 
-Live at: `https://edi-badge-web-app.vercel.app/`
+Live at: [EDI BADGE](https://edi-badge-app-eliasgoats-projects.vercel.app/)
