@@ -28,7 +28,8 @@ export default function MintButton({ formData, canvasRef }) {
       //This makes sure only allowed wallets can mint. For now, it's only me (Elias) and the examiner (Raphael)
       const ALLOWED_WALLETS = [
         "0x8D4fb4B7cbb0d8e8E225eAA6cCe7C5aBB6030c5c",
-        "0x0c4869fd5A92ed96Aef6EFAeFCfdC1BEe931B67F"
+        "0x0c4869fd5A92ed96Aef6EFAeFCfdC1BEe931B67F",
+        "0x3d9525B2ae59846607911af8293Bd7b61f8E0B50"
       ];
 
       // Validate recipient wallet
